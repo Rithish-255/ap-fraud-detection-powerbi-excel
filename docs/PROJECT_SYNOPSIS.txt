@@ -1,0 +1,114 @@
+# Accounts Payable & Duplicate Payment Detection using Business Analytics and Power BI
+
+## Project Synopsis
+
+### Title
+Accounts Payable & Duplicate Payment Detection using Business Analytics and Power BI
+
+### Objective
+To build a business analytics model for detecting duplicate and rogue payments in the accounts payable workflow using Excel and Power BI dashboards.
+
+### Problem Statement
+Organizations often face financial leakage in the accounts payable process due to duplicate invoice payments, approval bypass, delayed payments, and vendor anomaly patterns. Manual review is slow and inefficient, and many suspicious transactions remain hidden without a structured exception monitoring process.
+
+### Scope
+This project focuses on analyzing a synthetic dataset of accounts payable transactions and applying business rules to detect fraudulent or suspicious payment patterns. It demonstrates how Excel and Power BI can be used to convert transaction data into actionable management insights.
+
+### Key Concepts
+- Duplicate payment detection
+- Rogue payment detection
+- Approval bypass detection
+- Days-to-pay analysis
+- Vendor risk scoring
+- Department-wise exception analysis
+- Dashboard-driven business intelligence
+
+### Data Fields Used
+- Invoice_ID
+- Vendor_Name
+- Vendor_ID
+- Invoice_Date
+- Due_Date
+- Payment_Date
+- Amount
+- Currency
+- Payment_Mode
+- Department
+- Approval_Status
+- Approved_By
+- PO_Number
+- Payment_Reference
+- Duplicate_Flag
+- Rogue_Payment_Flag
+- Days_To_Pay
+- Risk_Score
+
+### Business Rules
+1. Duplicate Payment Rule:
+   If the same Vendor_ID, Amount, and Payment_Reference appear more than once, the record is marked as duplicate.
+
+2. Rogue Payment Rule:
+   If the payment is made with rejected approval, missing approval, or payment before approval, it is marked as rogue.
+
+3. Approval Bypass Rule:
+   If Approved_By is blank or NA, or approval is missing, the transaction is flagged for investigation.
+
+4. Delay Rule:
+   If Days_To_Pay exceeds the defined threshold, the payment is considered delayed and higher risk.
+
+### Tools Used
+- Microsoft Excel
+- Power BI Desktop
+- Power Query
+- Data modeling and DAX measures
+
+### Dashboard Design
+The project includes dashboards for:
+- Executive Overview
+- Vendor Risk Analysis
+- Payment Exception Analysis
+- Control Review Page
+
+### Key Metrics
+- Total invoice volume
+- Total payment value
+- Duplicate payment count
+- Duplicate payment amount
+- Rogue payment count
+- Average days to pay
+- High-risk vendors
+- Department-wise exception rate
+
+### Sample Result Interpretation
+The dashboard is expected to show:
+- duplicate payments on same vendor and payment reference
+- rogue payments released without valid approval
+- repeated high-risk vendors such as Vendor_08
+- delayed payments in AP and Finance departments
+- risk clusters requiring review before next payment cycle
+
+### Example Output Summary
+- Duplicate payment candidates: 2+ suspicious cases
+- Rogue payments: 1+ unauthorized cases
+- High-risk vendors: Vendor_08, Vendor_01
+- Delay risk: above threshold in multiple transactions
+- Control gaps: missing or rejected approval trail
+
+### Business Impact
+This project demonstrates how business analytics can help organizations:
+- reduce duplicate payment losses
+- prevent unauthorized disbursement
+- strengthen approval governance
+- improve AP audit quality
+- support risk-based monitoring
+
+### Academic Relevance
+This project is suitable for:
+- major project reports
+- finance analytics assignments
+- internal audit case studies
+- business intelligence demos
+- MBA / M.Com / B.Com / IT / analytics coursework
+
+### Conclusion
+The project proves that Excel and Power BI can be used to build a practical and effective accounts payable exception monitoring system. By converting transaction data into dashboard-based insights, organizations can improve control enforcement and reduce financial leakage.
